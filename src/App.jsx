@@ -23,6 +23,7 @@ export class App extends Component {
   onSearch = (e) => {
     e.preventDefault();
     this.getGeoData(e.target.form.search.value);
+    e.target.form.reset();
   }
 
   getGeoData = async (ip) => {
