@@ -46,7 +46,10 @@ export class App extends Component {
           <div className="search">
             <form>
               <input type="text" name="search" placeholder="Search for any IP address or domain" />
-              <button onClick={this.onSearch}><img src={right} alt="" aria-hidden='true' /><span className="sr-only">Search button</span></button>
+              <button onClick={this.onSearch}>
+                <img src={right} alt="" aria-hidden='true' />
+                <span className="sr-only">Search button</span>
+              </button>
             </form>
           </div>
           <div className="info">
