@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+$width__mobile: 375px;
+$width__tablet: 768px;
+$width__desktop: 1440px;
+
+$color__very-dark-gray: hsl(0, 0%, 17%);
+$color__dark-gray: hsl(0, 0%, 59%);
+
+$typography__font-size: 18px;
+
+$typography__font-family: "Rubik", sans-serif;
+
+$typography__font-weight--regular: 400;
+$typography__font-weight--medium: 500;
+$typography__font-weight--bold: 700;
+
+@mixin mobile {
+    @media screen and (max-width: $width__mobile){
+        @content;
+    }    
+}
+
+@mixin tablet {
+    @media screen and (max-width: $width__tablet){
+        @content;
+    }    
+}

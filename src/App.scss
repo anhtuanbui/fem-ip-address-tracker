@@ -1,0 +1,134 @@
+@import './shared/variables.scss';
+
+header {
+    position: relative;
+    background: url(./images/pattern-bg.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    height: 15rem;
+
+    @include tablet {
+        padding: 0 1.35rem;
+        height: 20.5rem;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 2rem 0;
+        color: white;
+        font-size: 2rem;
+        font-weight: $typography__font-weight--regular;
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+        border: none;
+        padding: 1rem;
+        border-radius: 0.825rem 0 0 0.825rem;
+        width: 20rem;
+        max-width: calc(100% - 3rem );
+        box-sizing: border-box;
+
+        &:hover {
+            color: $color__very-dark-gray;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        width: 3rem;
+        border: none;
+        border-radius: 0 0.825rem 0.825rem 0;
+        padding: calc(1rem - 1px);
+        background: black;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+            background: $color__very-dark-gray;
+        }
+    }
+}
+
+.info {
+    position: absolute;
+    bottom: -3.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    margin: auto;
+    width: 50rem;
+    max-width: calc(100% - 2.7rem);
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.1);
+
+    @include tablet {
+        width: 25rem;
+        bottom: -11rem;
+        max-width: calc(100% - 2.7rem);
+    }
+
+    @include mobile {
+        width: calc(100% - 2.7rem);
+    }
+
+    ul {
+        display: flex;
+        padding: 2rem 0;
+        margin: 0;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+            border-left: 1px solid $color__dark-gray;
+            padding: 0 2rem;
+
+            @include tablet {
+                border: none;
+                padding: 0.75rem 0;
+            }
+            h2, p {
+                margin: 0;
+            }
+
+            h2 {
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                color: $color__dark-gray;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-weight: $typography__font-weight--medium;
+            }
+
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+}
+
+.map-container {
+  width: 100%;
+  height: calc(100vh - 15rem);
+
+  @include tablet {
+    height: calc(100vh - 20.5rem);
+  }
+}
